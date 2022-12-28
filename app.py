@@ -17,6 +17,6 @@ def predict():
     final_features = [np.array(features)]
     prediction = model.predict(final_features)
     output = prediction[0]
-    return render_template('index.html', prediction_text="If a 1 then you have a diabetes, if a 0 then no diabetes you are a {}".format(output))
+    return render_template('index.html', prediction_text="If a 1 then you have a diabetes, if a 0 then no diabetes. You are a {}".format(output))
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
